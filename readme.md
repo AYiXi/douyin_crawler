@@ -224,4 +224,4 @@ https://service.yundou.me/
 
 1. wec.cloud@gmail.com
 2. tg: +639288446666
-3. QQ: 2390501091 2878261643
+3. wx: wxfpy5201 (QQ 被盗，弃用) 

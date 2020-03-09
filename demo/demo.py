@@ -3,7 +3,7 @@
 
 import requests
 
-data = '{"token":"36ea7692e261cc32f593b2cd7eb7dc6c","type":"crawler_search_user","search":"yesterday once more","num":20}'
+data = '{"token":"f87acc3139beeead39f0555587be2745","type":"crawler_search_user","search":"china","num":20}'
 response = requests.post('https://service.yundou.me/', data=data)
 
-print(response)
+print(response.text)
