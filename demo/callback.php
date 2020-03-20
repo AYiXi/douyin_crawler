@@ -58,12 +58,12 @@ $http->on('request', function ($request, $response) {
     }
 
     //这里添加自己的处理逻辑
-    file_put_contents(microtime(true) . ".json", var_export($json, true));
+    file_put_contents("callback.json", var_export($json, true));
 
     //最优处理流程是先写入队列，再进行异步消费
     //redis()->lpush("callback", $json);
 
-    printf("[%s] %s : %s\n", date("Y-m-d H:i:s"), $json["type"], $json["task"] ?? "");
+    printf("[%s] %s : %s\n", date("Y-m-d H:i:s"), $json["type"], $json["id"] ?? "");
 
     $msg = json_encode(["code" => 200, "msg" => "ok"]);
     $response->end($msg);
